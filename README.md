@@ -46,3 +46,34 @@ Para desenvolvedores que desejam modificar ou estudar o código:
    ```bash
    git clone [https://github.com/SEU_USUARIO/sentinela-ids.git](https://github.com/SEU_USUARIO/sentinela-ids.git)
    cd sentinela-ids
+
+2. Crie e ative um ambiente virtual (recomendado):
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate
+
+3. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+
+4. Execute a aplicação (abra o terminal como Administrador):
+   ```bash
+   python app.py
+
+⚠️ Notas Importantes de Segurança
+Privilégios Elevados: A biblioteca scapy interage diretamente com o hardware de rede (Camada de Enlace). Por isso, o software requer execução como Administrador. Sem isso, a captura falhará silenciosamente.
+
+Falso Positivo de Antivírus: Caso você faça o build manual do .exe utilizando o PyInstaller, é comum que ferramentas antivírus (como Avast ou Windows Defender) bloqueiem o arquivo ou o isolem em uma Sandbox. Isso ocorre devido à natureza da ferramenta (interceptação de pacotes de baixo nível). Trata-se de um falso positivo, e o executável é totalmente seguro. Adicione o arquivo às exceções do seu antivírus.
+
+🛠️ Tecnologias Utilizadas
+1. Python
+
+2. Scapy (Manipulação de Redes)
+
+3. CustomTkinter (UI Design)
+
+4. SQLite3 (Banco de Dados)
+
+5. psutil (Hardware Profiling)
+
+6. Threading / Socket / OS (Bibliotecas Nativas)
