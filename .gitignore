@@ -1,0 +1,12 @@
+# Ambientes Virtuais
+venv/
+__pycache__/
+
+# Compilação
+build/
+dist/
+*.spec
+
+# Dados Locais e Logs
+logs/
+historico_rede.db
